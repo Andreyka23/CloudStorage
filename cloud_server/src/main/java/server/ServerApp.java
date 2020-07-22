@@ -1,0 +1,10 @@
+package server;
+
+public class ServerApp {
+
+    private static final int DEFAULT_PORT = 8189;
+
+    public static void main(String[] args) {
+        new NetworkServer(DEFAULT_PORT).start();
+    }
+}
