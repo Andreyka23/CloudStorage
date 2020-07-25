@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bee71277-1b43-466e-8327-ebb0d106026e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud_storage.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/cloud_client.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/NetworkClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/controllers/ClientController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/models/NetworkService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/target/classes/NetworkClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/target/classes/controllers/ClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/target/classes/models/NetworkService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/cloud_server.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/server/ClientHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/server/NetworkServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/server/ServerApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/server/ClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/server/NetworkServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/server/ServerApp.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +30,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jf-manager/jf-manager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\cloud_storage" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.FileUtility">
     <configuration name="FileUtility" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -126,11 +112,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.cloud_storage []" />
       <item itemvalue="Application.NetworkClient" />
       <item itemvalue="Application.FileUtility" />
       <item itemvalue="Application.Server" />
       <item itemvalue="Application.ServerApp" />
+      <item itemvalue="Maven.cloud_storage []" />
     </list>
     <recent_temporary>
       <list>
@@ -167,6 +153,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="677" y="179" key="#FileUtility" timestamp="1595667923578">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="677" y="179" key="#FileUtility/0.0.1920.1040@0.0.1920.1040" timestamp="1595667923578" />
     <state x="677" y="191" key="#NetworkClient" timestamp="1595415922378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
