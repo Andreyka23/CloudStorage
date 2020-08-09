@@ -11,5 +11,13 @@
 
     <artifactId>cloud_server</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.geekbrains</groupId>
+            <artifactId>common</artifactId>
+            <version>1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>

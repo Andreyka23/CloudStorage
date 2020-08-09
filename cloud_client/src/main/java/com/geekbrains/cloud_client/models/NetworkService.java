@@ -1,37 +1,97 @@
-package models;
+package com.geekbrains.cloud_client.models;
 
-import java.io.*;
+import com.geekbrains.common.commands.AbstractCommand;
+import io.netty.handler.codec.serialization.ObjectDecoderInputStream;
+import io.netty.handler.codec.serialization.ObjectEncoderOutputStream;
+
+import java.io.IOException;
 import java.net.Socket;
-import java.util.List;
-import java.util.Scanner;
-
-import controllers.ClientController;
 
 public class NetworkService {
 
     private final String host;
     private final int port;
 
-    private ClientController controller;
+  //  private ClientController controller;
 
     private Socket socket;
-    private DataInputStream in;
-    private DataOutputStream out;
+    private ObjectEncoderOutputStream out;
+    private ObjectDecoderInputStream in;
 
     public NetworkService(String host, int port) {
         this.host = host;
         this.port = port;
     }
 
-    public void connect(ClientController controller) throws IOException {
-        this.controller = controller;
+    public void connect() throws IOException {
+      //  this.controller = controller;
+        /*
         socket = new Socket(host, port);
         //  socket.setSoTimeout(120000);
         in = new DataInputStream(socket.getInputStream());
         out = new DataOutputStream(socket.getOutputStream());
         runWriteThread();
         runReadThread();
+         */
+
+        try  {
+            socket = new Socket(host, port);
+            out = new ObjectEncoderOutputStream(socket.getOutputStream());
+            in = new ObjectDecoderInputStream(socket.getInputStream(), 100 * 1024 * 1024);
+            /*
+            FileRequestCommand textMessage = new FileRequestCommand("Hello Server!!!");
+            oeos.writeObject(textMessage);
+            oeos.flush();
+            FileRequestCommand msgFromServer = (FileRequestCommand) odis.readObject();
+            System.out.println("Answer from server: " + msgFromServer.getFilePath());
+             */
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+
+    public boolean sendCommand(AbstractCommand msg) {
+        try {
+            out.writeObject(msg);
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public AbstractCommand readObject() throws ClassNotFoundException, IOException {
+        Object obj = in.readObject();
+        return (AbstractCommand) obj;
+    }
+
+
+    public void stop() {
+        try {
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+
+
+    /*
+
 
     private void runWriteThread() {
         new Thread(() -> {
@@ -122,5 +182,6 @@ public class NetworkService {
             e.printStackTrace();
         }
     }
+     */
 
 }
