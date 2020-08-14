@@ -1,0 +1,4 @@
+/.idea
+cloud_client/target/*
+cloud_server/target/*
+common/target/*
