@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bee71277-1b43-466e-8327-ebb0d106026e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/cloud_client.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_storage/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client_storage/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_storage/2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/NetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/NetworkClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/controllers/ClientController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/models/NetworkService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/com/geekbrains/cloud_client/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/com/geekbrains/cloud_client/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_client/target/classes/NetworkClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/target/classes/NetworkClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/target/classes/controllers/ClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/target/classes/models/NetworkService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/server/ClientHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/server/NetworkServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/server/ServerApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/server/ClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/server/NetworkServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/server/ServerApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server/CloudServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server/CloudServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server/NetworkServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server/NetworkServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/geekbrains/common/commands/FileDataCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/geekbrains/common/commands/FileDataCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +25,7 @@
       <list>
         <option value="Class" />
         <option value="XSLT Stylesheet" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -60,7 +49,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cloud_client/src/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -68,15 +57,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.geekbrains.cloud_server.services" />
       <recent name="com.geekbrains.common.commands" />
-      <recent name="com.geekbrains.cloud_client.controllers" />
       <recent name="com.geekbrains.cloud_client.models" />
+      <recent name="com.geekbrains.cloud_client.controllers" />
       <recent name="commands" />
-      <recent name="server" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Java\cloud_storage\cloud_client\src\main" />
       <recent name="C:\Java\cloud_storage\cloud_server\src\main\java\com\geekbrains\cloud_server" />
+      <recent name="C:\Java\cloud_storage\cloud_client\src\main" />
       <recent name="C:\Java\cloud_storage\module_client\src\main\java" />
     </key>
   </component>
@@ -168,8 +157,8 @@
       <item itemvalue="Application.FileUtility" />
       <item itemvalue="Application.Server" />
       <item itemvalue="Application.ServerApp" />
-      <item itemvalue="Maven.cloud_storage []" />
       <item itemvalue="Application.ServerApp (1)" />
+      <item itemvalue="Maven.cloud_storage []" />
     </list>
     <recent_temporary>
       <list>
@@ -231,42 +220,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596900926022" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1596900236969">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1597397260449">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596900236969" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1596920013914">
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597397260449" />
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1597424881590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596920013914" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1596920013914">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597424881590" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1597424881590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596920013914" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1596920013913">
+    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597424881590" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1597424881590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596920013913" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1596920013914">
+    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597424881590" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1597424881590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596920013914" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1595429730420">
+    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597424881590" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1597176865477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595429730420" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1595429730420">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597176865477" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1597176865477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595429730420" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1595429730420">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597176865477" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1597176865476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595429730420" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1595429730420">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597176865476" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1597176865477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595429730420" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597176865477" />
     <state x="625" y="219" key="NewModule_or_Project.wizard" timestamp="1596668381634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -279,10 +268,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="299" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596884684379" />
-    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1596913555267">
+    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1597422322132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596913555267" />
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597422322132" />
     <state x="342" y="216" key="new project wizard" timestamp="1596668099204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -291,5 +280,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595413970492" />
+    <state x="682" y="433" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1597424617830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="682" y="433" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597424617830" />
   </component>
 </project>

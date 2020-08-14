@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="237.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.geekbrains.cloud_client.controllers.LoginController">
+   <children>
+      <VBox prefHeight="239.0" prefWidth="385.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="92.0" prefWidth="385.0" text="Авторизация" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
+            <HBox prefHeight="33.0" prefWidth="385.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="150.0" text="     Логин" />
+                  <TextField fx:id="login" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="194.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="31.0" prefWidth="385.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="150.0" text="     Пароль" />
+                  <TextField fx:id="password" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="194.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="68.0" prefWidth="385.0">
+               <children>
+               <VBox prefHeight="80.0" prefWidth="385.0">
+                  <children>
+                     <Button fx:id="authBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                             onAction="#clickAuthButton" prefHeight="44.0" prefWidth="199.0" text="Войти"
+                             textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets left="100.0" top="10.0" />
+                           </VBox.margin>
+                     </Button>
+                  </children>
+               </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
