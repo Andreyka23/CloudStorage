@@ -23,6 +23,7 @@ public class NetworkServer {
         EventLoopGroup mainGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
+            System.out.println("Сервер запущен и ожидает подключений.");
             ServerBootstrap b = new ServerBootstrap();
             b.group(mainGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
