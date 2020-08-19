@@ -1,20 +1,19 @@
 package com.geekbrains.cloud_server;
 
 import com.geekbrains.cloud_server.services.NetworkService;
-import com.geekbrains.common.commands.AuthCommand;
-import com.geekbrains.common.commands.FileDataCommand;
-import com.geekbrains.common.commands.ServerResponse;
+import com.geekbrains.common.commands.*;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-
-import com.geekbrains.common.commands.FileRequestCommand;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CloudServerHandler extends ChannelInboundHandlerAdapter {
     @Override
@@ -47,15 +46,15 @@ public class CloudServerHandler extends ChannelInboundHandlerAdapter {
             System.out.println("Client text message: " + ((FileRequestCommand) msg).getFilename());
           //  ctx.writeAndFlush(new FileRequestCommand("Hello Client!"));
             FileRequestCommand fr = (FileRequestCommand) msg;
-            if (Files.exists(Paths.get("server_storage/" + fr.getFilename()))) {
+            if (Files.exists(Paths.get("server_storage/" + fr.getLogin() + "/" + fr.getFilename()))) {
 
-                File file = new File("server_storage/" + fr.getFilename() );
+                File file = new File("server_storage/" + fr.getLogin() + "/" + fr.getFilename() );
                 int bufSize = 1024 * 1024 * 10;
                 int partsCount = new Long(file.length() / bufSize).intValue();
                 if (file.length() % bufSize != 0) {
                     partsCount++;
                 }
-                FileDataCommand fmOut = new FileDataCommand(fr.getFilename(), -1, partsCount, new byte[bufSize]);
+                FileDataCommand fmOut = new FileDataCommand(fr.getLogin(), fr.getFilename(), -1, partsCount, new byte[bufSize]);
                 FileInputStream in = new FileInputStream(file);
                 for (int i = 0; i < partsCount; i++) {
                     int readedBytes = in.read(fmOut.getData());
@@ -81,7 +80,7 @@ public class CloudServerHandler extends ChannelInboundHandlerAdapter {
                 append = false;
             }
             System.out.println(fData.partNumber + " / " + fData.partsCount);
-            FileOutputStream fos = new FileOutputStream("server_storage/" + fData.getFilename(), append);
+            FileOutputStream fos = new FileOutputStream("server_storage/" + fData.getLogin() + "/" + fData.getFilename(), append);
             fos.write(fData.data);
             fos.close();
             if (fData.partNumber == fData.partsCount) {
@@ -89,6 +88,22 @@ public class CloudServerHandler extends ChannelInboundHandlerAdapter {
               //  refreshClientFilesList();
                 System.out.println("Загрузка завершена");
             }
+        } else if (msg instanceof GetUserFilesCommand) {
+            GetUserFilesCommand fData = (GetUserFilesCommand) msg;
+            Path path = Paths.get("server_storage/" + fData.getLogin() );
+            if ( ! Files.exists(path)) {
+                File folder = new File("server_storage/" + fData.getLogin() );
+                folder.mkdir();
+            }
+            Path path_files = Paths.get("server_storage/" + fData.getLogin());
+            List<String> filesList = new ArrayList<String>();
+            Files.list(path_files)
+                    .filter(p -> !Files.isDirectory(p))
+                    .map(p -> p.getFileName().toString())
+                    .forEach(o -> filesList.add(o) );
+
+            SendUserFilesCommand sendUserFilesCommand = new SendUserFilesCommand( filesList );
+            ctx.writeAndFlush(sendUserFilesCommand);
         } else {
             System.out.printf("Server received wrong object!");
         }

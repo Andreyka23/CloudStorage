@@ -1,9 +1,7 @@
 package com.geekbrains.cloud_client.controllers;
 
 import com.geekbrains.cloud_client.models.NetworkService;
-import com.geekbrains.common.commands.AbstractCommand;
-import com.geekbrains.common.commands.FileDataCommand;
-import com.geekbrains.common.commands.FileRequestCommand;
+import com.geekbrains.common.commands.*;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +16,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.concurrent.CountDownLatch;
 
@@ -63,6 +62,9 @@ public class MainController implements Initializable {
                             cdl.countDown();
                             refreshClientFilesList();
                         }
+                    } else if (am instanceof SendUserFilesCommand) {
+                        SendUserFilesCommand fData = (SendUserFilesCommand) am;
+                        refreshServerFilesList(fData.getUserFilesList());
                     }
                 }
             } catch (ClassNotFoundException | IOException e) {
@@ -75,11 +77,12 @@ public class MainController implements Initializable {
         t.start();
         // cdl.await();
         refreshClientFilesList();
-        refreshServerFilesList();
+        //refreshServerFilesList();
     }
 
     public void setLogin(String login) {
         this.userLogin = login;
+        networkService.sendCommand(new GetUserFilesCommand(this.userLogin));
     }
 
     public void pressOnUploadBtn(ActionEvent actionEvent) throws IOException, InterruptedException {
@@ -95,7 +98,7 @@ public class MainController implements Initializable {
                 if (file.length() % bufSize != 0) {
                     partsCount++;
                 }
-                FileDataCommand fmOut = new FileDataCommand(uploadFile, -1, partsCount, new byte[bufSize]);
+                FileDataCommand fmOut = new FileDataCommand(this.userLogin, uploadFile, -1, partsCount, new byte[bufSize]);
                 FileInputStream in = new FileInputStream(file);
                 for (int i = 0; i < partsCount; i++) {
                     int readedBytes = in.read(fmOut.getData());
@@ -109,7 +112,8 @@ public class MainController implements Initializable {
                 in.close();
 
                 Thread.sleep(100);
-                refreshServerFilesList();
+                networkService.sendCommand(new GetUserFilesCommand(this.userLogin));
+                //refreshServerFilesList();
             }
 
         } else
@@ -120,7 +124,7 @@ public class MainController implements Initializable {
         String downloadFile = serverFilesList.getSelectionModel().getSelectedItem();
         if (downloadFile != null) {
             System.out.println("Скачивание файла: " + downloadFile);
-            networkService.sendCommand(new FileRequestCommand(downloadFile));
+            networkService.sendCommand(new FileRequestCommand(this.userLogin, downloadFile));
         } else
             System.out.println("Выберите файл!");
     }
@@ -139,18 +143,21 @@ public class MainController implements Initializable {
         });
     }
 
-    public void refreshServerFilesList() {
-        // TODO изменить на получение файлов с сервера
+    public void refreshServerFilesList(List<String> userFilesList) {
+
         Platform.runLater(() -> {
-            try {
                 serverFilesList.getItems().clear();
-                Files.list(Paths.get("server_storage"))
+                for( String file : userFilesList ) {
+                    serverFilesList.getItems().add(file);
+                }
+                /*
+                Files.list(userFilesList)
                         .filter(p -> !Files.isDirectory(p))
                         .map(p -> p.getFileName().toString())
                         .forEach(o -> serverFilesList.getItems().add(o));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+
+                 */
         });
+
     }
 }

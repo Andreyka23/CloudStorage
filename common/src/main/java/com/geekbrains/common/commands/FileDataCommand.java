@@ -5,10 +5,15 @@ import java.io.Serializable;
 
 public class FileDataCommand extends AbstractCommand implements Serializable {
 
+    String login;
     String filename;
     public int partNumber;
     public int partsCount;
     public byte[] data;
+
+    public String getLogin() {
+        return login;
+    }
 
     public String getFilename() {
         return filename;
@@ -18,12 +23,11 @@ public class FileDataCommand extends AbstractCommand implements Serializable {
         return data;
     }
 
-    public FileDataCommand(String filename, int partNumber, int partsCount, byte[] data) throws IOException {
+    public FileDataCommand(String login, String filename, int partNumber, int partsCount, byte[] data) throws IOException {
+        this.login = login;
         this.filename = filename;
         this.partNumber = partNumber;
         this.partsCount = partsCount;
         this.data = data;
-        // filename = path.getFileName().toString();
-        // data = Files.readAllBytes(path);
     }
 }

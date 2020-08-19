@@ -3,14 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="bee71277-1b43-466e-8327-ebb0d106026e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_storage/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client_storage/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_storage/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_storage/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client_storage/client_test_file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/NetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/NetworkClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/com/geekbrains/cloud_client/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/com/geekbrains/cloud_client/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_client/target/classes/NetworkClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/target/classes/NetworkClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server/CloudServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server/CloudServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server/NetworkServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server/NetworkServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/geekbrains/common/commands/FileDataCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/geekbrains/common/commands/FileDataCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/geekbrains/common/commands/FileRequestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/geekbrains/common/commands/FileRequestCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_storage/2.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cloud_server/src/main/java/com/geekbrains/cloud_server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -57,13 +57,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.geekbrains.cloud_server.services" />
       <recent name="com.geekbrains.common.commands" />
+      <recent name="com.geekbrains.cloud_server.services" />
       <recent name="com.geekbrains.cloud_client.models" />
       <recent name="com.geekbrains.cloud_client.controllers" />
       <recent name="commands" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\cloud_storage" />
+      <recent name="C:\Java\cloud_storage\server_storage\login1" />
       <recent name="C:\Java\cloud_storage\cloud_server\src\main\java\com\geekbrains\cloud_server" />
       <recent name="C:\Java\cloud_storage\cloud_client\src\main" />
       <recent name="C:\Java\cloud_storage\module_client\src\main\java" />
@@ -220,26 +222,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596900926022" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1597397260449">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1597842288079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597397260449" />
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1597424881590">
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597842288079" />
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1597842664911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597424881590" />
-    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1597424881590">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597842664911" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1597842664911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597424881590" />
-    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1597424881590">
+    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597842664911" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1597842664911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597424881590" />
-    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1597424881590">
+    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597842664911" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1597842664911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597424881590" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597842664911" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1597176865477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -268,10 +270,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="299" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596884684379" />
-    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1597422322132">
+    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1597833244394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597422322132" />
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597833244394" />
     <state x="342" y="216" key="new project wizard" timestamp="1596668099204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -280,6 +282,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595413970492" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597835118505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597835118505" />
     <state x="682" y="433" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1597424617830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

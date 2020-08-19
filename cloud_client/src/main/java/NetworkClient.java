@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 public class NetworkClient extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main.fxml"));
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/login.fxml"));
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("Client");
@@ -19,14 +18,6 @@ public class NetworkClient extends Application {
 
 
     public static void main(String[] args) {
-        /*
-        try {
-            ClientController clientController = new ClientController("localhost", 8189);
-            clientController.runApplication();
-        } catch (IOException e) {
-            System.err.println("Failed to connect to server! Please, check you network settings");
-        }
-         */
         launch(args);
     }
 
